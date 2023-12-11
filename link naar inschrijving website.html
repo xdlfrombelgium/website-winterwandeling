@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inschrijven Winterwandeling Herentals</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button, a {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        button:hover, a:hover {
+            background-color: #45a049;
+        }
+
+        .confirmation-message {
+            display: none;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Inschrijven Winterwandeling Herentals</h1>
+    </header>
+
+    <div class="container">
+        <form id="inschrijfformulier" onsubmit="showConfirmation(); return false;">
+            <label for="naam">Naam:</label>
+            <input type="text" id="naam" name="naam" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="aantal_personen">Aantal personen:</label>
+            <input type="number" id="aantal_personen" name="aantal_personen" min="1" required>
+
+            <button type="submit">Inschrijven</button>
+
+            <!-- Knop om terug te gaan naar de vorige website -->
+            <a href="C:/Users/delaetx0922/OneDrive%20-%20kOsh/Documenten/Xander/School%20Xander%205OR/website%20winterwandeling%20Herentals.html" class="button">Terug naar vorige website</a>
+        </form>
+
+        <div class="confirmation-message" id="bevestiging">
+            Uw inschrijving is geregistreerd.
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>Geprogrammeerd door Xander De Laet</strong></p>
+    </footer>
+
+    <script>
+        function showConfirmation() {
+            document.getElementById("inschrijfformulier").style.display = "none";
+            document.getElementById("bevestiging").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
